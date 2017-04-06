@@ -77,15 +77,15 @@
                       </li>
                       <li class="footer-menu-divider">&sdot;</li>
                       <li>
-                          <a href="/about_me">About</a>
+                          <a href="about_me">About</a>
                       </li>
                       <li class="footer-menu-divider">&sdot;</li>
                       <li>
-                          <a href="/registration">Register</a>
+                          <a href="registration">Register</a>
                       </li>
                       <li class="footer-menu-divider">&sdot;</li>
                       <li>
-                          <a href="/contact_me">Contact</a>
+                          <a href="contact_me">Contact</a>
                       </li>
                   </ul>
                   <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>

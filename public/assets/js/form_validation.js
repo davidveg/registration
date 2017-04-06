@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$().ready(function(){
   $('.zipcode').mask('00000-000');
   $('.nif').mask('000000000');
   $('#password').pwstrength({
@@ -33,7 +33,7 @@ $(document).ready(function(){
             email: true,
             equalTo: "#email"
           },
-          address: "required",
+          street_address: "required",
           country: "required",
           nif: {
             required : true,
@@ -129,7 +129,7 @@ $(document).ready(function(){
       } else {
           return false;
       }
-    }, "Please specify a valid NIF number." );
+    }, "Please specify a valid NIF number. Format: 0000000000" );
 
 
     jQuery.validator.addMethod( "phoneCountries", function( phone_number, element ) {
