@@ -28,7 +28,7 @@ class Controller_Registration extends Controller_Template {
 				$address->save();
 
 				Session::set_flash('success','Client submited successfully !');
-				Response::redirect('registration/index');
+				Response::redirect('registration');
 			}else{
 				Session::set_flash('error','Ops, something goes wrong ! Check the error(s) below !');
 			}
@@ -78,7 +78,8 @@ class Controller_Registration extends Controller_Template {
 		$val->add('location', 'Location')
 			->add_rule('required');
 		$val->add('phone_number', 'Phone Number')
-			->add_rule('required');
+			->add_rule('required')
+			->add_rule('phone_number', (int) Input::post('country'));
 		$val->add('zipcode', 'Zip Code')
 			->add_rule('required');
 		$val->add('nif', 'NIF')

@@ -6,16 +6,22 @@
     <div class="content-section-a">
 
         <div class="container">
+					<?php if(Session::get_flash('success')) : ?>
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<?php if(Session::get_flash('success')) : ?>
 								<div class="alert alert-success"> <?php echo Session::get_flash('success') ?></div>
-							<?php endif; ?>
-							<?php if(Session::get_flash('error')) : ?>
-								<div class="alert alert-danger"> <?php echo Session::get_flash('error') ?></div>
-							<?php endif; ?>
- 						</div>
+						</div>
 					</div>
+					<?php endif; ?>
+					<?php if(Session::get_flash('error')) : ?>
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="alert alert-danger"> <?php echo Session::get_flash('error') ?></div>
+						</div>
+					</div>
+					<?php endif; ?>
+					<h2>Free Registration </h2>
+					<div>Register fast and easily. It's fast and free !
 					<div class="panel panel-default">
 					<div class="panel-body">
 	          <?php echo Form::open(array('id' => 'form_validation', 'action' => 'registration/index', 'method' => 'post')) ?>
@@ -86,7 +92,7 @@
 								<?php echo $val->error('phone_number') ?>
 							</div>
 							<div class="actions">
-							<?php echo Form::submit('send', 'Submit',  array('class' => 'btn btn-default')) ?>
+							<?php echo Form::submit('send', 'Register !',  array('class' => 'btn btn-default')) ?>
 							</div>
 	        	</form>
 					</div>
