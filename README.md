@@ -1,15 +1,15 @@
 # Registration (A OLX Portugal Challenge)
 
-###Overview
+### Overview
 
 This trial’s deadlines will be notified upon delivery of this document, and all Graphic/Development material or files must be delivered to catarina.mendes@fixeads.com
 
-###Deliverables
+### Deliverables
 
 Candidates must develop in HTML+CSS the lead caption form suggested in the mockup provided. The form should replicate exactly the one present in the given reference.
 Candidate must provide SQL for DB creation, HTML + CSS + JS and PHP.
 
-###Specification:
+### Specification:
 
 * Form validation and development must be coded in Javascript + PHP
 
