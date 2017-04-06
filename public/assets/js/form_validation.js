@@ -45,7 +45,7 @@ $(document).ready(function(){
             digits: true
           },
           location : "required",
-          phonenumber: "required"
+          phone_number: "required"
 				},
 				messages: {
 					firstname: "Please enter your firstname",

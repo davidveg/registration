@@ -22,12 +22,14 @@ class Controller_Registration extends Controller_Template {
 				$address->user->social_number = Input::post('nif');
 				$address->street_address = Input::post('street_address');
 				$address->location = Input::post('location');
-				$address->location = Input::post('zipcode');
+				$address->zipcode = Input::post('zipcode');
 
 				$address->save();
 
 				Session::set_flash('success','Client submited successfully !');
 				Response::redirect('registration/index');
+			}else{
+				Session::set_flash('error','Ops, something goes wrong ! Check the error(s) below !');
 			}
 		}
 
@@ -70,6 +72,8 @@ class Controller_Registration extends Controller_Template {
 			->add_rule('match_field', 'confirm_password');
 		$val->add('street_address', 'Street Address')
 			->add_rule('required');
+		$val->add('country', 'Country')
+				->add_rule('required');
 		$val->add('location', 'Location')
 			->add_rule('required');
 		$val->add('phone_number', 'Phone Number')
@@ -80,7 +84,7 @@ class Controller_Registration extends Controller_Template {
 			->add_rule('required')
 			->add_rule('exact_length', 9)
 			->add_rule('nif');// custom validation rule
-			
+
 		return $val;
 	}
 
