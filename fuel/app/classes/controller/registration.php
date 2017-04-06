@@ -17,6 +17,7 @@ class Controller_Registration extends Controller_Template {
 
 				$address->user->firstname = Input::post('firstname');
 				$address->user->lastname = Input::post('lastname');
+				$address->user->password = password_hash(Input::post('password'), PASSWORD_DEFAULT);
 				$address->user->email = Input::post('email');
 				$address->user->phone_number = Input::post('phone_number');
 				$address->user->social_number = Input::post('nif');

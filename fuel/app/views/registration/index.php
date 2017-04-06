@@ -58,7 +58,7 @@
 	            <div class="form-group">
 	              <label for="country">Country:</label>
 	              <select class="form-control" name="country" id="country">
-	                <option selected disabled>Choose one...</option>
+	                <option disabled>Choose one...</option>
 	                <?php foreach ($countries as $country) : ?>
 	                  <option <?php if ($val->validated('country') == $country -> id) { ?>selected<?php }; ?> value="<?php echo $country -> id ?>"><?php echo $country -> name ?></option>;
 	                 <?php endforeach; ?>
@@ -82,7 +82,7 @@
 	            </div>
 	            <div class="form-group">
 	              <label for="phone_number">Phone Number:</label>
-								<?php echo Form::input('phone_number', $val->validated('phone_number'), array('class' => 'form-control', 'type' => 'number')) ?>
+								<?php echo Form::input('phone_number', $val->validated('phone_number'), array('class' => 'form-control', 'type' => 'tel', 'id' => 'phone_number')) ?>
 								<?php echo $val->error('phone_number') ?>
 							</div>
 							<div class="actions">

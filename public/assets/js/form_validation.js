@@ -41,11 +41,13 @@ $(document).ready(function(){
             nifValidator : true
           },
           zipcode : {
-            required: true,
-            digits: true
+            required: true
           },
           location : "required",
-          phone_number: "required"
+          phone_number: {
+            required: true,
+            phoneCountries : true
+          }
 				},
 				messages: {
 					firstname: "Please enter your firstname",
@@ -128,5 +130,29 @@ $(document).ready(function(){
           return false;
       }
     }, "Please specify a valid NIF number." );
+
+
+    jQuery.validator.addMethod( "phoneCountries", function( phone_number, element ) {
+      country = $('#country option:selected').text();
+      phone_number = phone_number.replace( /\s+/g, "" );
+      if(country == 'Portugal'){
+        return this.optional( element ) || phone_number.length > 9 &&
+        	 phone_number.match( /^3519[1236]{1}[0-9]{7}$/ );
+      }else  if(country == 'Brazil') {
+        return this.optional( element ) || phone_number.length > 9 &&
+            phone_number.match( /^55[0-9]{2}([9]{1})?([0-9]{4})([0-9]{4})$/ );
+      }else if(country == 'Germany') {
+        return this.optional( element ) || phone_number.length > 9 &&
+            phone_number.match( /^49[0-9]{2}([9]{1})?([0-9]{4})([0-9]{4})$/ );
+      }else if(country == 'Norway') {
+        return this.optional( element ) || phone_number.length > 9 &&
+            phone_number.match( /^47[0-9]{2}([9]{1})?([0-9]{4})([0-9]{4})$/ );
+      } else if(country == 'Spain') {
+        return this.optional( element ) || phone_number.length > 9 &&
+            phone_number.match( /^34[0-9]{2}([9]{1})?([0-9]{4})([0-9]{4})$/ );
+      }
+    }, "Please specify a " + $('#country option:selected').text() +" valid phone number" );
+
+
 
 });

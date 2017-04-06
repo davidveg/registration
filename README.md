@@ -1,42 +1,76 @@
-#FuelPHP
+# Registration (A OLX Portugal Challenge)
 
-* Version: 1.8
-* [Website](http://fuelphp.com/)
-* [Release Documentation](http://docs.fuelphp.com)
-* [Release API browser](http://api.fuelphp.com)
-* [Development branch Documentation](http://dev-docs.fuelphp.com)
-* [Development branch API browser](http://dev-api.fuelphp.com)
-* [Support Forum](http://fuelphp.com/forums) for comments, discussion and community support
+###Overview
 
-## Description
+This trial’s deadlines will be notified upon delivery of this document, and all Graphic/Development material or files must be delivered to catarina.mendes@fixeads.com
 
-FuelPHP is a fast, lightweight PHP 5.3+ framework. In an age where frameworks are a dime a dozen, We believe that FuelPHP will stand out in the crowd.  It will do this by combining all the things you love about the great frameworks out there, while getting rid of the bad.
+###Deliverables
 
-FuelPHP is fully PHP 7 compatible.
+Candidates must develop in HTML+CSS the lead caption form suggested in the mockup provided. The form should replicate exactly the one present in the given reference.
+Candidate must provide SQL for DB creation, HTML + CSS + JS and PHP.
 
-## More information
+###Specification:
 
-For more detailed information, see the [development wiki](https://github.com/fuelphp/fuelphp/wiki).
+* Form validation and development must be coded in Javascript + PHP
 
-##Development Team
+* Upon form fulfilment, a message must be presented stating if it was a success or indication possible problems.
 
-* Harro Verton - Project Manager, Developer ([http://wanwizard.eu/](http://wanwizard.eu/))
-* Steve West - Core Developer, ORM
-* Márk Sági-Kazár - Developer
+* A check for email already in use must be implemented without the need to submit the form.
 
-### Want to join?
+* Please validate fields:
 
-The FuelPHP development team is always looking for new team members, who are willing
-to help lift the framework to the next level, and have the commitment to not only
-produce awesome code, but also great documentation, and support to our users.
+* NIF -> Nine numeric digits
 
-You can not apply for membership. Start by sending in pull-requests, work on outstanding
-feature requests or bugs, and become active in the #fuelphp IRC channel. If your skills
-are up to scratch, we will notice you, and will ask you to become a team member.
+* Postal Code -> XXXX – XXX
 
-### Alumni
+* Phone -> If Country is Portugal should only allow PT phone numbers
 
-* Frank de Jonge - Developer ([http://frenky.net/](http://frenky.net/))
-* Jelmer Schreuder - Developer ([http://jelmerschreuder.nl/](http://jelmerschreuder.nl/))
-* Phil Sturgeon - Developer ([http://philsturgeon.co.uk](http://philsturgeon.co.uk))
-* Dan Horrigan - Founder, Developer ([http://dhorrigan.com](http://dhorrigan.com))
+- Password strength algorithm can be defined by the candidate and explained in code comments.
+
+- Security and code efficiency are important evaluation points.
+
+- The solution presented should be a working solution.
+
+- Colors/Design presented is not mandatory. Candidates may disregard for instance colors of elements.
+
+- The country list can be filled only with 4 countries as long one of them is Portugal.
+
+## Getting Started
+Execute first the SQL Script in SQL project folder in MYSQL Database.
+- username: registration
+- password: registration
+
+
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+Just copy the registration folder to any apache http server with php module installed.
+
+Then, access:
+```
+http://{server}/registration/public
+```
+
+## Built With
+
+* [FuelPHP](https://fuelphp.com) - The web framework used
+* [JQuery](https://jquery.com) - The Javascript Helper Library
+* [JQueryValidation](https://jqueryvalidation.org) - Javascript validation helper
+* [Bootstrap](http://getbootstrap.com) - Used to generate the layout
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [Git](https://git-scm.com) for versioning. For the versions available, see the [tags on this repository](https://github.com/davidveg/registration/tags).
+
+## Authors
+
+* **David Vega** - *Initial work* - [DavidVeg](https://github.com/davidveg)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
